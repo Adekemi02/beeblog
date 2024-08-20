@@ -1,0 +1,37 @@
+{% extends 'partials/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+<title> Logout Success </title>
+{% endblock %}
+
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card w-75 mb-3">
+                <div class="card-header mb-3"> 
+                    Logout Successful
+                </div>
+                <div class="alert alert-info">
+                    You have been logged out successfully.
+                </div>
+        
+                <a class="btn text-danger" href="{% url 'login' %}"> Login </a>
+            </div>
+
+            
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

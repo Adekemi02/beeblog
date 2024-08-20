@@ -1,0 +1,83 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-12 col-lg-8 col-xl-7">
+
+            <!-- Post preview-->
+            {% for post in posts %}
+            <div class="post-preview card-body mb-4">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="profile-img me-2">
+                        <img 
+                            src="
+                                {% if user.profile_image %}
+                                {{ user.profilemodel.profile_image.url }}
+                                {% else %}
+                                {% static 'blog/img/default.jpg' %}
+                                {% endif %}
+                            " 
+                            class="rounded-circle " 
+                            alt="Profile Image"
+                            style="width: 80px; height: 80px; object-fit: cover;"
+                        >
+                    </div>
+                    
+                    <div class="post-content flex-grow-1">
+                        <a href="{% url 'post_detail' post.id %}">
+                            <h2 class="post-title">
+                                {{ post.title }}
+                            </h2>
+                        </a>
+                        <!-- <div> -->
+                            <p class="post-subtitle">
+                                <!-- {{ post.content }} -->
+                                {{ post.content|slice:":300" }}{% if post.content|length > 300 %}...{% endif %}
+                            </p>
+                        <!-- </div>                       -->
+
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{ post.author }}</a>
+                            {{ post.created_at }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Pager-->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if posts.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ posts.previous_page_number }}">previous</a>
+                    {% endif %}
+            
+                    <span class="current">
+                        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                    </span>
+            
+                    {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}">next</a>
+                        <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-between">
+        <div class="col-md-4 mb-4">
+            <!-- Post preview-->
+            <div class="post-preview card p-3">
+                <h5> Filter by category </h5>
+                <form method="GET" action="{% url 'search' %}">
+                    <div class="form-group mb-3">
+                        <label for="category"></label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="">All Categories</option>
+                            {% for category in categories %}
+                                <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h2>Search Results</h2>
+            {% for post in posts %}
+                <div class="post-preview">
+                    <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+                    <p>{{ post.content|slice:":300" }}{% if post.content|length > 300 %}...{% endif %}</p>
+                    <p><small>Posted by <a href="#!">{{ post.author }}</a> on {{ post.created_at }}</small></p>
+                </div>
+            {% empty %}
+                <p>No posts found.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+<title> Logout </title>
+{% endblock %}
+
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card w-75 mb-3">
+                <div class="card-header mb-3"> 
+                    Logout page 
+                </div>
+                <div class="alert alert-info">
+                    Are sure you want to logout?
+                </div>
+
+                <div class="card-body">
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block header %}
+{% include 'partials/header.html' %}
+{% endblock %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card w-75 mb-3">
+                <div class="card-header mb-4"> Register here </div>
+
+                <div class="card-body">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        {{ form.username|as_crispy_field }}
+                        {{ form.email|as_crispy_field }}
+                        {{ form.password1|as_crispy_field }}
+                        {{ form.password2|as_crispy_field }}
+                        <button type="submit" class="btn btn-primary"> Sign up </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="align-items-center ml-3 pt-2">
+                <small class="text-muted">
+                    Already have an account? <a class="btn text-danger" href="{% url 'login' %}">Login</a>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

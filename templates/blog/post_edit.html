@@ -1,0 +1,44 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block title %} Register {% endblock %}
+
+{% block header %}
+<header class="masthead" 
+style="background-image: url('{% static "blog/img/post-bg.jpg" %}');"
+>
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Beeblog</h1>
+                    <span class="subheading">Inspiring Ideas, One Post at a Time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card w-75 mb-3">
+                <div class="card-header">Post article</div>
+
+                <div class="card-body">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
