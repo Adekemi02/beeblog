@@ -102,6 +102,12 @@ cd your-repository
    ```bash
    python manage.py createsuperuser
    ```
+7. **To populate the category section**
+   Navigate to the blog app and go to the populate_category.py inside the management folder. Update the file to your satisfaction. Then go to your terminal and run the following command:
+
+   ```bash
+   python manage.py populate_category.py
+   ```
 
 7. **Run the Development Server**
 
