@@ -1,7 +1,77 @@
 # Beeblog
 
+<!-- Back to Top Navigation Anchor -->
+<a name="readme-top"></a>
+
+<div align="center">
+  <a href="https://github.com/Adekemi02/beeblog">
+    
+  </a>
+</div>
+
+---
+
+<!---Project Logo --->
+
+<div align="center">
+  <h1><img src="./static/blog/img/Beeblog.png" alt="Logo" width="90%" height="40%">
+  </h1>
+</div>
+
+<div>
+  <p align="center">
+    <a href="https://github.com/Adekemi02/beeblog#readme"><strong>Explore the Docs »</strong></a>
+    <br />
+    <a href="https://github.com/Adekemi02/beeblog/blob/main/static/snapshot.png">View Demo</a>
+    ·
+    <a href="https://github.com/Aadekemi/beeblog/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Adekemi02/beeblog/issues">Request Feature</a>
+  </p>
+</div>
+
+---
+
+<!--- Table of Contents --->
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-beeblog">About Beeblog</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#lessons-learned">Lessons Learned</a></li>
+    <li><a href="#features">Features</a></li>    
+    <li><a href="#future-features">Future Features</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#future-plans">Future plans</a></li>
+    <li><a href="#sample">Sample</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+  <p align="right"><a href="#readme-top">back to top</a></p>
+</details>
+
+---
+
+<!--- About the blog --->
+## About Beeblog
 This is blog application created with Django. A feature-rich blog application built with Django. This project includes user authentication, blog management, commenting, and various other features aimed at providing a robust blogging platform.
 
+---
+
+<!-- ### Built With: -->
+## Built with
+
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+---
+
+<!-- ### Features: -->
 ## Features
 
 - **User Authentication**: Register, login, and manage user accounts.
@@ -10,6 +80,9 @@ This is blog application created with Django. A feature-rich blog application bu
 - **Category Filtering**: Filter blog posts by category.
 - **Search Functionality**: Search for blog posts by title or content (in view).
 
+---
+
+<!-- ### Future Features: -->
 ## Future Features
 
 1. **Profile Pages for Bloggers**: 
@@ -25,6 +98,9 @@ This is blog application created with Django. A feature-rich blog application bu
 6. **Bookmark Feature**:
    - Enable users to bookmark their favorite blog posts for easy access.
 
+---
+
+<!-- ### Usage: -->
 ## Getting Started
 
 ### Cloning the Repository
@@ -109,7 +185,7 @@ cd your-repository
    python manage.py populate_category
    ```
 
-7. **Run the Development Server**
+8. **Run the Development Server**
 
    ```bash
    python manage.py runserver
@@ -117,6 +193,9 @@ cd your-repository
 
    You can now access the application at `http://127.0.0.1:8000/`.
 
+---
+
+<!-- ### Future Plans: -->
 ## Future Plans
 
 ### Secure Coding Practices
@@ -126,16 +205,40 @@ cd your-repository
 - **Data Validation**: Ensure all user inputs are validated and sanitized.
 - **Use HTTPS**: Ensure the application uses HTTPS to secure data in transit.
 
+---
 
+<!-- Sample Screenshot -->
+## Sample
 
+<div align="center">
+  <h1><img src="./static/blog/img/Beeblog.png" alt="Logo">
+  </h1>
+</div>
+
+---
+
+<!-- Contact -->
+## Contact
+
+Barakat Adisa - [@adisa_adekhemie](https://twitter.com/adisa_adekhemie) - 
+[linkedin](https://linkedin.com/in/adekhemieadisa)
+adisabarakatadekemi@gmail.com
+
+Project Link: [Beeblog](https://github.com/Adekemi02/beeblog)
+
+---
+
+<!-- ### Contribution: -->
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue if you have suggestions or find bugs.
 
+---
+
+<!-- ### License: -->
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Feel free to modify the placeholders and add any specific details about your project.
