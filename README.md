@@ -43,7 +43,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#lessons-learned">Lessons Learned</a></li>
     <li><a href="#features">Features</a></li>    
     <li><a href="#future-features">Future Features</a></li>
     <li><a href="#getting-started">Getting started</a></li>
@@ -220,7 +219,7 @@ cd your-repository
 <!-- Contact -->
 ## Contact
 
-Barakat Adisa - [@adisa_adekhemie](https://twitter.com/adisa_adekhemie) - 
+Barakat Adisa - [twitter](https://twitter.com/adisa_adekhemie) - 
 [linkedin](https://linkedin.com/in/adekhemieadisa)
 adisabarakatadekemi@gmail.com
 
