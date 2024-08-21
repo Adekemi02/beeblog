@@ -76,6 +76,7 @@ def user_logout(request):
         return redirect('logout_success')
     return render(request, 'users/logout.html')
 
+#   Logout success route
 def logout_success(request):
     return render(request, 'users/logout_success.html')
 
