@@ -24,7 +24,7 @@
     <br />
     <a href="https://github.com/Adekemi02/beeblog/blob/main/static/blog/img/Beeblog.png">View Demo</a>
     ·
-    <a href="https://github.com/Aadekemi/beeblog/issues">Report Bug</a>
+    <a href="https://github.com/Adekemi02/beeblog/issues">Report Bug</a>
     ·
     <a href="https://github.com/Adekemi02/beeblog/issues">Request Feature</a>
   </p>
